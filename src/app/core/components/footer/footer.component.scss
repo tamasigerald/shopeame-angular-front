@@ -1,0 +1,29 @@
+@import '../../../../styles/imports/wildcard';
+
+.footer {
+    @include flexCenter(column);
+    justify-content: space-evenly;
+    height: 280px;
+    width: 100%;
+    font-size: 1.8rem;
+    font-weight: $w-light;
+    background-color: $c-gray100;
+    text-align: center;
+    color: $c-white;
+    &__text {
+        padding-bottom: 2rem;
+    }
+    &__link {
+        color: $c-white;
+        text-decoration: none;
+        font-weight: $w-bold;
+        padding: 0 1.8rem;
+        border-right: 1px solid $c-white;
+        &:last-of-type {
+            border: 0;
+        }
+        &:hover {
+            color: $c-orangeDark;
+        }
+    }
+}

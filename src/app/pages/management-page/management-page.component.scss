@@ -1,0 +1,27 @@
+@import '../../shared/styles/styles.scss';
+
+.separator {
+    border: 1px solid $c-orangeDark;
+    margin: 3rem 0;
+}
+
+@include lg-screen {
+    .separator {
+        height: 434px;
+        width: 0;
+    }
+    
+    .c-card {
+        &__content {
+            @include flexCenter(row);
+            justify-content: space-between;
+            position: relative;
+            & > *:first-child {
+                width: 50%;
+            }
+            & > *:last-child {
+                width: 30%;
+            }
+        }
+    }
+}

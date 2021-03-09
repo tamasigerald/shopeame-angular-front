@@ -1,0 +1,65 @@
+@import '../../shared/styles/styles.scss';
+
+.c-card {
+    &__header {
+        @include flexCenter(row);
+        justify-content: space-between;
+        margin-bottom: 10rem;
+    }
+}
+
+.switch{
+    @include flexCenter(row);
+    justify-content: flex-end;
+    width: 30%;
+    &__container {
+        @include flexCenter(row);
+        justify-content: space-between;
+        height: 5rem;
+        width: 17rem;
+        border-radius: 4px;
+        background-color: $c-gray20;
+        
+    }
+    &__button {
+        height: 100%;
+        width: 50%;
+        position: relative;
+    }
+    &__input {
+        transition: all 0.2s;
+        cursor: pointer;
+        padding: 1rem;
+        appearance: none;
+        outline: 0;
+        height: 100%;
+        width: 100%;
+        &--list {
+            border-radius: 4px 0 0 4px;
+        }
+        &--gallery {
+            border-radius: 0 4px 4px 0;
+        }
+        
+        &:checked {
+            background-color: $c-white;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 4px;
+        }
+    }
+    &__icon {
+        cursor: pointer;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .active {
+        path {
+            fill: $c-gray90;
+        }
+    }
+    
+    
+}
+

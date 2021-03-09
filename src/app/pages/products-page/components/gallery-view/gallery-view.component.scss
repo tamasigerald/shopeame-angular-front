@@ -1,0 +1,122 @@
+@import '../../../../shared/styles/styles.scss';
+
+
+
+.card {
+    @include flexCenter(column);
+    justify-content: space-between;
+    margin-bottom: 8rem;
+    min-height: 472px;
+    transition: all 0.2s;
+    padding: 2rem 1rem;
+    &__avatar {
+        @include flexCenter(column);
+        height: 242px;
+        width: 100%;
+        margin-bottom: 3rem;
+        overflow: hidden;
+    }
+    &__image {
+        height: 100%;
+        max-width: 100%;
+        object-fit: cover;
+    }
+    &__info {
+        @include flexCenter(column);
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100%;
+    }
+    &__name {
+        color: $c-black;
+        font-weight: $w-light;
+        line-height: 3rem;
+    }
+    &__price {
+        color: $c-black;
+        font-size: 3rem;
+        font-weight: $w-bold;
+        line-height: 4.5rem;
+        padding: 1.5rem 0;
+    }
+    &__desc {
+        color: $c-gray50;
+        font-size: 1.8rem;
+        font-weight: $w-light;
+        line-height: 2.8rem;
+        margin-bottom: 2rem;
+        height: 5rem;
+        text-overflow: ellipsis;
+    }
+    &__name, &__price, &__desc {
+        width: 100%;
+    }
+    &__dollar {
+        margin-right: 0.5rem;
+    }
+}
+
+.rating {
+    @include flexCenter(row);
+    justify-content: space-between;
+    width: 100%;
+    line-height: 3rem;
+    &__wrapper {
+        @include flexCenter(row);
+    }
+    &__container {
+         @include flexCenter(row);
+        position: relative;
+        width: 10rem;
+        font-size: 2rem;
+    }
+    &__upper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        color: $c-orangeDark;
+        z-index: 2;
+        transition: width 1.5s ease-out;
+    }
+    &__lower {
+        display: inline-block;
+        position: relative;
+        color: $c-black;
+        width: 100%;
+        z-index: 1;
+    }
+    &__text {
+        color: $c-gray80;
+        font-size: 1.8rem;
+        font-weight: $w-regular;
+        margin-left: 0.5rem;
+        -webkit-text-stroke-width: 0;
+    }
+}
+
+
+@include lg-screen {
+    .c-card__content {
+        @include flexCenter(row);
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%
+    }
+    .card {
+        width: 45%;
+    }
+}
+
+@include tb-screen {
+    .card {
+        width: 30%;
+    }
+}
+
+@include dp-screen {
+    .card {
+        width: 22%;
+    }
+}

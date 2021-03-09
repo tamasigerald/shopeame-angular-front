@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 8px;
+}
+
+body {
+    font-size: 2rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: $w-regular;
+    background-color: $c-gray20;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}

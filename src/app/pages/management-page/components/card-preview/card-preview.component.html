@@ -1,0 +1,37 @@
+<aside>
+  <h4>Preview del producto:</h4>
+  <div class="card">
+    <figure class="card__avatar">
+      <img class="card__image" src="{{product.image}}" alt="" *ngIf="product.image">
+      <img class="card__image" src="../../../../../assets/images/default-avatar.jpg" alt="" *ngIf="!product.image">
+    </figure>
+    <div class="card__info">
+      <figcaption class="card__name">{{product.name}}</figcaption>
+      <div class="card__price"><span class="card__dollar">&#36;</span>{{product.price}}</div>
+      <div class="card__desc">{{product.description}}</div>
+      <div class="rating">
+        <div class="rating__wrapper">
+          <div class="rating__container">
+            <div class="rating__upper" [ngStyle]="{'width': getPercentage(product.stars)}">
+              <i class='bx bxs-star rating__star'></i>
+              <i class='bx bxs-star rating__star'></i>
+              <i class='bx bxs-star rating__star'></i>
+              <i class='bx bxs-star rating__star'></i>
+              <i class='bx bxs-star rating__star'></i>
+            </div>
+            <div class="rating__lower">
+              <i class='bx bx-star rating__star'></i>
+              <i class='bx bx-star rating__star'></i>
+              <i class='bx bx-star rating__star'></i>
+              <i class='bx bx-star rating__star'></i>
+              <i class='bx bx-star rating__star'></i>
+            </div>
+          </div>
+          <div class="rating__text">
+            {{product.stars}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</aside>

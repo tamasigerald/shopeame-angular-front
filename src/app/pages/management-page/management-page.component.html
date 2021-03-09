@@ -1,0 +1,10 @@
+<section class="c-card" *ngIf="product">
+  <header class="c-card__header">
+    <h2 class="c-card__title">Creaci&oacute;n/edici&oacute;n de productos</h2>
+  </header>
+  <div class="c-card__content">
+    <app-product-form [product]='product' (emitSubmit)="checkProduct($event)"></app-product-form>
+    <div class="separator"></div>
+    <app-card-preview [product]='product'></app-card-preview>
+  </div>
+</section>

@@ -1,0 +1,99 @@
+@import '../../../../shared/styles/styles.scss';
+
+.card {
+    @include flexCenter(row);
+    padding: 2% 5%;
+    height: 350px;
+    margin-bottom: 2rem;
+    &__avatar {
+        @include flexCenter(column);
+        max-height: 100%;
+        width: 45%;
+        overflow: hidden;
+    }
+    &__content {
+        margin-left: 5%;
+        width: 60%;
+    }
+    &__image {
+        height: 100%;
+        max-width: 100%;
+        object-fit: cover;
+        // margin-bottom: 3rem;
+    }
+    &__name {
+        color: $c-black;
+        font-weight: $w-light;
+        line-height: 3rem;
+    }
+    &__price {
+        color: $c-black;
+        font-size: 3rem;
+        font-weight: $w-bold;
+        line-height: 4.5rem;
+        padding: 1.5rem 0;
+    }
+    &__desc {
+        color: $c-gray50;
+        font-size: 1.8rem;
+        font-weight: $w-light;
+        line-height: 2.8rem;
+        margin-bottom: 2rem;
+    }
+    &__name, &__price, &__desc {
+        width: 100%;
+    }
+    &__dollar {
+        margin-right: 0.5rem;
+    }
+}
+
+.rating {
+    @include flexCenter(row);
+    justify-content: space-between;
+    width: 100%;
+    line-height: 3rem;
+    &__wrapper {
+        @include flexCenter(row);
+    }
+    &__container {
+        display: inline-block;
+        unicode-bidi: bidi-override;
+        color: $c-white;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: orange;
+        font-size: 1.6rem;
+        // height: 25px;
+        width: auto;
+        margin: 0;
+        position: relative;
+        padding: 0;
+    }
+    &__upper {
+        color: orange;
+        padding: 0;
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+    }
+    &__lower {
+        padding: 0;
+        display: flex;
+        z-index: 0;
+    }
+    &__star {
+        margin: 0 1rem 0 0;
+        font-weight: $w-bold;
+    }
+    &__text {
+        color: $c-gray80;
+        font-size: 1.8rem;
+        font-weight: $w-regular;
+        margin-left: 0.8rem;
+        -webkit-text-stroke-width: 0;
+    }
+}
+

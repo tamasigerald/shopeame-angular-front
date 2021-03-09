@@ -1,0 +1,25 @@
+@import '../../shared/styles/styles.scss';
+
+.c-card {
+    .text--italic {
+        font-style: italic;
+    }
+    &__title{
+        font-size: 3rem;
+        font-weight: $w-bold;
+        text-align: center;
+        margin: 0;
+        margin-bottom: 10rem;
+    }
+}
+
+.content {
+    font-weight: $w-regular;
+    &__title {
+        margin: 4rem 0;
+    }
+    &__text {
+        font-size: 1.8rem;
+        text-align: justify;
+    }
+}

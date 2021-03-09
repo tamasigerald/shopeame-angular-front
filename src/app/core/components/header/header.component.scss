@@ -1,0 +1,77 @@
+@import '../../../../styles/imports/wildcard';
+
+.c-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    &__logo {
+        @include flexCenter(row);
+        height: 100px;
+        background-color: $c-white;
+        cursor: pointer;
+        .logo {
+            outline: 0;
+            border-radius: 10px;
+            transition: all 0.2s;
+            &:hover{
+                background-color: $c-gray20;
+            }
+        }
+    }
+    &__nav{
+        @include flexCenter(row);
+        height: 72px;
+        background-color: $c-orangeLight;
+    }
+}
+
+.c-nav {
+    @include flexCenter(row);
+    height: 100%;
+    &__link {
+        @include flexCenter(column);
+        height: 75% !important;
+        // justify-content: space-between;
+        position: relative;
+        color: $c-gray100;
+        padding: 1rem 3rem;
+        margin: 0 0.5rem;
+        text-decoration: none;
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+        height: 50%;
+        border-radius: 10px;
+        z-index: 99;
+        transition: all 0.5s;
+        &:hover:before {
+            opacity: 0.3;
+        }
+        &::before {
+            transition: all 0.2s;
+            content: '';
+            position: absolute;
+            border-radius: 10px;
+            height: 100%;
+            width: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #EBF2FF;
+            opacity: 0;
+            z-index: -1;
+        }
+    }
+}
+
+.active {
+    color: $c-blue90;
+    path {
+        transition: all 0.5s;
+        fill: $c-blue90;
+    }
+    &::before {
+        opacity: 0.3;
+    }
+    
+}

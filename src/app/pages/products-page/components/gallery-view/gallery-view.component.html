@@ -1,0 +1,38 @@
+<article class="c-card__content">
+  <div class="card" *ngFor="let product of products">
+      <figure class="card__avatar">
+          <img class="card__image" src="{{product.image}}" alt="">
+          <img class="card__image" src="../../../../../assets/images/default-avatar.jpg" alt="" *ngIf="!product.image">
+      </figure>
+      <div class="card__info">
+        <figcaption class="card__name">{{product.name}}</figcaption>
+        <div class="card__price"><span class="card__dollar">&#36;</span>{{product.price.toFixed(2)}}</div>
+        <div class="card__desc">{{product.description}}</div>
+        <div class="rating">
+          <div class="rating__wrapper">
+            <div class="rating__container">
+              <div class="rating__upper" [ngStyle]="{'width': getPercentage(product.stars)}">
+                <i class='bx bxs-star rating__star'></i>
+                <i class='bx bxs-star rating__star'></i>
+                <i class='bx bxs-star rating__star'></i>
+                <i class='bx bxs-star rating__star'></i>
+                <i class='bx bxs-star rating__star'></i>
+              </div>
+              <div class="rating__lower">
+                <i class='bx bx-star rating__star'></i>
+                <i class='bx bx-star rating__star'></i>
+                <i class='bx bx-star rating__star'></i>
+                <i class='bx bx-star rating__star'></i>
+                <i class='bx bx-star rating__star'></i>
+              </div>
+            </div>
+            <div class="rating__text">
+              {{product.stars.toFixed(1)}}
+            </div>
+          </div>
+          <button class="btn btn--edit" routerLink="/management/{{product.id}}">Editar</button>
+        </div>
+      </div>
+  </div>
+  
+</article>
