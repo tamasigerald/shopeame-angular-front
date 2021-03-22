@@ -28,7 +28,7 @@ export class ProductsPageComponent implements OnInit {
 
     // GET PRODUCTS FROM API
     this.productsService.getProducts().subscribe((res: any) => {
-      this.products = res;
+      this.products = res.result;
     });
   }
 

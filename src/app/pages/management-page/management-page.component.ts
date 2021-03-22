@@ -28,7 +28,7 @@ export class ManagementPageComponent implements OnInit {
     });
     if (this.idProduct) {
       this.productService.getProduct(this.idProduct).subscribe((res: any) => {
-        this.product = res;
+        this.product = res.result[0];
       });
     }
   }

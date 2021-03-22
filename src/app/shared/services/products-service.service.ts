@@ -16,7 +16,7 @@ export class ProductsServiceService {
   }
   // tslint:disable-next-line: typedef
   getProduct(idProduct) {
-    return this.http.get(environment.baseUrl + idProduct);
+    return this.http.get(environment.baseUrl + `?id=${idProduct}`);
   }
 
   // tslint:disable-next-line: typedef
@@ -26,6 +26,11 @@ export class ProductsServiceService {
 
   // tslint:disable-next-line: typedef
   updateProduct(id ,product) {
-    return this.http.put(`${environment.baseUrl}${id}`, product);
+    return this.http.put(`${environment.baseUrl}?id=${id}`, product, {
+      responseType: 'json' as const,
+      headers: {
+        responseType: 'text',
+      }
+    });
   }
 }
